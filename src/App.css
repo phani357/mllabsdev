@@ -1,20 +1,39 @@
-.sliding-text-container {
-  overflow: hidden;
-  width: 100%;
-}
 
-.sliding-text {
-  display: flex;
-  transition: transform 15s ease-in-out;
-}
-
-.text-item {
-  flex: 0 0 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.text-item.active {
-  opacity: 1;
-}
+.heading {
+  color: green;
+  font-size: 16px;
+  display: block;
+  }
+  
+  body {
+  background-color: black;
+  }
+  
+  .text-center {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .typewriter {
+  text-align: center; /* Centers the content horizontally */
+  }
+  
+  .typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em black; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 8 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+  typing 5s steps(40, end),
+  blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+  }
+  
 

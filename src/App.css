@@ -1,0 +1,20 @@
+.sliding-text-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sliding-text {
+  display: flex;
+  transition: transform 15s ease-in-out;
+}
+
+.text-item {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.text-item.active {
+  opacity: 1;
+}
+

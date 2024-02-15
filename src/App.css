@@ -1,13 +1,15 @@
 
 .heading {
   color: green;
-  font-size: 16px;
+  font-size: 18px;
   display: block;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
   }
   
   body {
   background-color: black;
   }
+  
   
   .text-center {
   position: absolute;
@@ -17,7 +19,8 @@
   }
   
   .typewriter {
-  text-align: center; /* Centers the content horizontally */
+  text-align: left; /* Centers the content horizontally */
+  position: relative;
   }
   
   .typewriter h1 {
@@ -29,6 +32,19 @@
   animation: 
   typing 5s steps(40, end),
   blink-caret .75s step-end infinite;
+  }
+  .input {
+    color: rgb(0, 44, 20);
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    text-align: left;
+    border: none;
+    position: relative;
+  display: block;
+  outline: none;
+  background-color: black;
+       
   }
   
   @keyframes typing {

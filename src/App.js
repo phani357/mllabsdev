@@ -1,16 +1,21 @@
-import './App.css';
+import React, { useState } from 'react';
+import  './App.css';
 
 function App() {
-return (
-<div className="typewriter">
-<h1 className="heading"> WELCOME,HUMAN.. EMBRACE
-THE POSSIBILITIES THAT LIE AHEAD, FOR HERE, 
-THE CONVERGENCE OF HUMAN INGENUITY AND ARTIFICIAL INTELLIGENCE {'/n'} SPARKS A NEW ERA OF DISCOVERY.
-PREPARE TO UNLOCK THE DOORS OF {'/n'} PERCEPTION AND EMBARK UPON A JOURNEY THAT
-TRANSCENDS THE LIMITS OF
-THE TANGIBLE WORLD.</h1>
-</div>
-);
+  const [inputText, setInputText] = useState('');
+  
+  const handleChange = (e) => {
+    setInputText(e.target.value);
+  };
+  
+  return (
+    <div className='typewriter'>
+      <h1 className="heading"> WELCOME,HUMAN.. EMBRACE THE POSSIBILITIES THAT LIE AHEAD, FOR HERE, THE CONVERGENCE OF HUMAN INGENUITY AND ARTIFICIAL INTELLIGENCE </h1>
+      <p className='heading'>HT! TYPE'DEMO' FOR SHOWCASING MY CAPABILITIES!</p>
+      <input className='input' type="text" value={inputText} onChange={handleChange} />
+      <p className='heading'> Your input matters: {inputText}</p>
+    </div>
+  );
 }
 
 export default App;

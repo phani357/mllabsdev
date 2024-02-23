@@ -1,21 +1,14 @@
-
+@import url('fonts/font.css');
 .heading {
-  color: green;
+  color: rgb(14, 61, 14);
   font-size: 18px;
   display: block;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-  }
-  
+  font-family: 'Order Regular';
+   }
+ 
   body {
+    position: relative;
   background-color: black;
-  }
-  
-  
-  .text-center {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  transform: translate(-50%, -50%);
   }
   
   .typewriter {
@@ -23,15 +16,25 @@
   position: relative;
   }
   
-  .typewriter h1 {
+  .typewriter label {
+    padding: 5%;
+   
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em black; /* The typewriter cursor */
+  border-right: .15em #e8f1e8; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 8 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em; /* Adjust as needed */
-  animation: 
-  typing 5s steps(40, end),
-  blink-caret .75s step-end infinite;
+  margin: 13 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 12 .1em; /* Adjust as needed */
+  animation: typing 5s steps(100) infinite;
+ 
+  display: inline-block;
+  }
+  .topRightImage {
+    position: absolute;
+    padding-bottom: 1;
+    top: 0;
+    right: 0;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
   }
   .input {
     color: rgb(0, 44, 20);
@@ -43,13 +46,12 @@
     position: relative;
   display: block;
   outline: none;
-  background-color: black;
-       
-  }
+  background-color:black;
+         }
   
   @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 60% }
   }
   
-
+  

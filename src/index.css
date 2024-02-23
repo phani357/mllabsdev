@@ -1,10 +1,10 @@
+@import url('fonts/font.css');
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Order Regular';
 }
 
 code {
-  font-family: 'Lato', sans-serif;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

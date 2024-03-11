@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+//import ReactDOM from 'react-dom';
+import  { useState } from 'react';
 import  './App.css';
-import './girl.png';
-
 
 function UserInputValidation() {
   // State to hold user input
@@ -24,10 +24,10 @@ function UserInputValidation() {
 
   return (
     <div className='typewriter'>
-      <label className='heading'>
-      WELCOME,HUMAN.. EMBRACE THE POSSIBILITIES THAT LIE AHEAD, FOR HERE, THE CONVERGENCE OF HUMAN INGENUITY AND ARTIFICIAL 
-      <input className='input' type="text" placeholder="Enter your text here" value={inputValue} onChange={handleInputChange} />
-      </label>
+      <span className='heading'> WELCOME,HUMAN.. EMBRACE THE POSSIBILITIES THAT LIE AHEAD, FOR HERE, THE CONVERGENCE OF HUMAN INGENUITY  
+      <br />                                                                                                                            </span>
+
+            <input className='input' type="text" placeholder="Type Demo to show my skills" value={inputValue} onChange={handleInputChange} />
       
       {/* Display result based on input */}
       <p className='input'>    {getOutput()}</p>

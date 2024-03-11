@@ -16,7 +16,7 @@
   position: relative;
   }
   
-  .typewriter label {
+  .typewriter span {
     padding: 5%;
    
   overflow: hidden; /* Ensures the content is not revealed until the animation */

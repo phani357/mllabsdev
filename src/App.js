@@ -1,39 +1,30 @@
-import React from 'react';
-//import ReactDOM from 'react-dom';
-import  { useState } from 'react';
-import  './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
-function UserInputValidation() {
-  // State to hold user input
-  const [inputValue, setInputValue] = useState('');
+const WelcomeMessage = () => {
+  const message = 'WELCOME,HUMAN.... EMBRACE THE POSSIBILITIES THAT LIE AHEAD, FOR HERE,  THE CONVERGENCE OF HUMAN INGENUITY AND ARTIFICIAL INTELLIGENCE SPARKS A NEW ERA OF DISCOVERY. PREPARE TO UNLOCK THE DOORS OF PERCEPTION AND EMBARK UPON A JOURNEY THAT TRANSCENDS THE LIMITS OF THE TANGIBLE WORLD';
+  const delay = 75; // Delay between each character (in milliseconds)
 
-  // Function to handle input change
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setInputValue(value);
-  };
+  const [currentCharIndex, setCurrentCharIndex] = useState(-1);
+  const [displayedMessage, setDisplayedMessage] = useState('');
+  const [animationRunning, setAnimationRunning] = useState(true);
 
-  // Function to determine the output based on input
-  const getOutput = () => {
-    if (inputValue.toLowerCase() === 'demo') {
-      return 'Let me show my skills, here are the list of actions to be performed';
-    } else {
-      return '';
-    }
-  };
+  useEffect(() => {
+    let index = currentCharIndex;
 
-  return (
-    <div className='typewriter'>
-      <span className='heading'> WELCOME,HUMAN.. EMBRACE THE POSSIBILITIES THAT LIE AHEAD, FOR HERE, THE CONVERGENCE OF HUMAN INGENUITY  
-      <br />                                                                                                                            </span>
+    const timer = setTimeout(() => {
+      if (index < message.length && animationRunning) {
+        setDisplayedMessage((prevState) => prevState + message[index]);
+        setCurrentCharIndex(index + 1);
+      } else {
+        setAnimationRunning(false);
+      }
+    }, delay);
 
-            <input className='input' type="text" placeholder="Type Demo to show my skills" value={inputValue} onChange={handleInputChange} />
-      
-      {/* Display result based on input */}
-      <p className='input'>    {getOutput()}</p>
-     <img className='topRightImage' src='/src/girl.png' alt='1'/>
-    </div>
-  );
-}
+    return () => clearTimeout(timer);
+  }, [currentCharIndex, animationRunning]);
 
-export default UserInputValidation;
+  return <div>{displayedMessage}</div>;
+};
+
+export default WelcomeMessage;

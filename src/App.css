@@ -1,57 +1,9 @@
-@import url('fonts/font.css');
-.heading {
-  color: rgb(14, 61, 14);
-  font-size: 18px;
-  display: block;
-  font-family: 'Order Regular';
-   }
- 
-  body {
-    position: relative;
+.app {
   background-color: black;
-  }
-  
-  .typewriter {
-  text-align: left; /* Centers the content horizontally */
-  position: relative;
-  }
-  
-  .typewriter span {
-    padding: 5%;
-   
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em #e8f1e8; /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 13 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 12 .1em; /* Adjust as needed */
-  animation: typing 5s steps(100) infinite;
- 
-  display: inline-block;
-  }
-  .topRightImage {
-    position: absolute;
-    padding-bottom: 1;
-    top: 0;
-    right: 0;
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .input {
-    color: rgb(0, 44, 20);
-    padding: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: larger;
-    text-align: left;
-    border: none;
-    position: relative;
-  display: block;
-  outline: none;
-  background-color:black;
-         }
-  
-  @keyframes typing {
-  from { width: 0 }
-  to { width: 60% }
-  }
-  
-  
+  color: green;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
